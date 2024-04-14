@@ -11,19 +11,19 @@ import { GiHamburgerMenu } from "react-icons/gi";
 function Navbar() {
 
   function show() { 
-    document.getElementsByClassName.toggle('show')
+    document.getElementsByClassName.toggle('navbar__container__links__show')
   }
 
 
   return <>
   <div className='navbar'>
-    <div className='social__icon'>
-        <ul className='navigation__icons'>
+    <div className='navbar__socialIcon'>
+        <ul className='navbar__socialIcon__icons'>
             <li><BsEnvelopeFill /> info@company.com</li>
             <li><FaLocationDot /> Sunny Isles Beach, FL 33160</li>
             
         </ul>
-        <ul className='social__icons__sub'>
+        <ul className='navbar__socialIcon__sub'>
         <li><TiSocialFacebook /></li>
         <li><TiSocialTwitter /></li>
         <li><TiSocialLinkedin /></li>
@@ -31,25 +31,25 @@ function Navbar() {
         </ul>
 
     </div>
-    <div className='nav__container'>
-        <h1 className='tittle'>Villa</h1>
-        <div className='nav__links '>
+    <div className='navbar__container'>
+        <h1 className='navbar__container__tittle'>Villa</h1>
+        <div className='navbar__container__links '>
 
-        <ul className='nav__links__sub'>
+        <ul className='navbar__container__links__sub'>
         <li>home</li>
         <li>properties</li>
         <li>porpety details</li>
         <li>contact us</li>
         </ul>
 
-          <ul className='visit'>
-            <li className='schedule_icon'><BsCalendar2Fill /></li>
+          <ul className='navbar__container__links__visit'>
+            <li className='navbar__container__links__visit__scheduleIcon'><BsCalendar2Fill /></li>
             <li> schedule a visit</li>
           </ul>
 
         </div>
     
-        <button className='hamburger_icon' onClick={() => {show()}}>
+        <button className='navbar__container__btn' onClick={() => {show()}}>
       <GiHamburgerMenu />
       </button>
 

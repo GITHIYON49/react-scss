@@ -13,19 +13,17 @@ body{
 }
 .navbar{
 
-    .social__icon{
-        @include displayflex();
-        justify-content: space-around;
+    &__socialIcon{
+        @include displayflex(center,space-around);
         border-bottom: 1px solid $secondnary_light;
         height: 60px;
 
-        .navigation__icons{
-            @include displayflex();
-            justify-content: space-around;
+        &__icons{
+            @include displayflex(center,space-around);
             gap: 15px;
         }
 
-        .social__icons__sub{
+        &__sub{
              @include displayflex();
             gap: 10px;
            
@@ -45,25 +43,23 @@ body{
 
     }
 
-    .nav__container{
-        @include displayflex();
-        justify-content:space-around;
+    &__container{
+        @include displayflex(center,space-around);
 
-        .tittle{
+        &__tittle{
             text-transform: uppercase;
         }
-        .nav__links{
+        &__links{
             @include displayflex(); 
             width: 80%;
            
-            .nav__links__sub{
-                @include displayflex(); 
+            &__sub{
+                @include displayflex(center,space-around); 
                 width: 60%;
-                justify-content: space-around;
                 text-transform: capitalize;
             }
-            .visit{
-                @include displayflex();
+            &__visit{
+                @include displayflex(center,center);
                 padding: 10px 20px;
                 border-radius: 30px;
                 background-color: $secondnary;
@@ -71,7 +67,7 @@ body{
                 position: relative;
                 width: 150px;
 
-                .schedule_icon{
+                &__scheduleIcon{
                 position: absolute;
                 left: 0px;
                 background-color: $primary;
@@ -82,7 +78,7 @@ body{
 
         }
 
-        .hamburger_icon{
+        &__btn{
             display: none;
         
         }
@@ -91,32 +87,32 @@ body{
     }
 
     @media(max-width:768px){
-        .social__icon{
+        &__socialIcon{
             display: none;
         }
-        .nav__container{
+        &__container{
+            @include displayflex(center,space-between);
             position: relative;
-            justify-content: space-between;
             width: 95%;
             margin: auto;
-            .nav__links{
+            &__links{
 
-            .nav__links__sub{
+                &__sub{
                 display:none;
                 flex-direction: column;
                 position: absolute;
                 top: 60px;
                 gap: 15px;
             }
-            .show{
+            &__show{
                 display: block;
             }
-            .visit{
+            &__visit{
                 display: none;
             }
         }
 
-            .hamburger_icon{
+           &__btn{
                 display:block;
                 outline: none;
                 border: none;
@@ -129,3 +125,4 @@ body{
     }
 
 }
+

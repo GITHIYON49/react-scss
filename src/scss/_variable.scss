@@ -3,8 +3,8 @@ $primary_light:#ffeee9;
 $secondnary:#1e1e1e;
 $secondnary_light:#858383;
 
-@mixin displayflex(){
+@mixin displayflex($align:'center',$justify:'center'){
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items:$align;
+    justify-content:$justify;
 }
