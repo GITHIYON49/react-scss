@@ -6,14 +6,21 @@ import { TiSocialFacebook } from "react-icons/ti";
 import { TiSocialTwitter } from "react-icons/ti";
 import { TiSocialLinkedin } from "react-icons/ti";
 import { TiSocialInstagram } from "react-icons/ti";
+import { GiHamburgerMenu } from "react-icons/gi";
 
 function Navbar() {
+
+  function show() { 
+    document.getElementsByClassName.toggle('show')
+  }
+
+
   return <>
   <div className='navbar'>
     <div className='social__icon'>
         <ul className='navigation__icons'>
-            <li><BsEnvelopeFill /></li>
-            <li><FaLocationDot /></li>
+            <li><BsEnvelopeFill /> info@company.com</li>
+            <li><FaLocationDot /> Sunny Isles Beach, FL 33160</li>
             
         </ul>
         <ul className='social__icons__sub'>
@@ -35,15 +42,19 @@ function Navbar() {
         <li>contact us</li>
         </ul>
 
-        <p className='visit'>
-        <BsCalendar2Fill />  schedule a visit
-        </p>
+          <ul className='visit'>
+            <li className='schedule_icon'><BsCalendar2Fill /></li>
+            <li> schedule a visit</li>
+          </ul>
 
         </div>
     
+        <button className='hamburger_icon' onClick={() => {show()}}>
+      <GiHamburgerMenu />
+      </button>
 
-
-    </div>
+      </div>
+      
 
 
   </div>

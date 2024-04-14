@@ -12,6 +12,120 @@ body{
     margin: 0;
 }
 .navbar{
-    @include displayflex;
+
+    .social__icon{
+        @include displayflex();
+        justify-content: space-around;
+        border-bottom: 1px solid $secondnary_light;
+        height: 60px;
+
+        .navigation__icons{
+            @include displayflex();
+            justify-content: space-around;
+            gap: 15px;
+        }
+
+        .social__icons__sub{
+             @include displayflex();
+            gap: 10px;
+           
+
+            li{
+                @include displayflex();
+                font-size:20px;
+                padding: 10px 12px;
+                border-radius: 50%;
+                color: white;
+                background-color:$secondnary_light;
+
+            }
+
+        }
+
+
+    }
+
+    .nav__container{
+        @include displayflex();
+        justify-content:space-around;
+
+        .tittle{
+            text-transform: uppercase;
+        }
+        .nav__links{
+            @include displayflex(); 
+            width: 80%;
+           
+            .nav__links__sub{
+                @include displayflex(); 
+                width: 60%;
+                justify-content: space-around;
+                text-transform: capitalize;
+            }
+            .visit{
+                @include displayflex();
+                padding: 10px 20px;
+                border-radius: 30px;
+                background-color: $secondnary;
+                color: white;
+                position: relative;
+                width: 150px;
+
+                .schedule_icon{
+                position: absolute;
+                left: 0px;
+                background-color: $primary;
+                padding: 10px;
+                border-radius: 50%;
+                }
+            }
+
+        }
+
+        .hamburger_icon{
+            display: none;
+        
+        }
+
+       
+    }
+
+    @media(max-width:768px){
+        .social__icon{
+            display: none;
+        }
+        .nav__container{
+            position: relative;
+            justify-content: space-between;
+            width: 95%;
+            margin: auto;
+            .nav__links{
+
+            .nav__links__sub{
+                display:none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                gap: 15px;
+            }
+            .show{
+                display: block;
+            }
+            .visit{
+                display: none;
+            }
+        }
+
+            .hamburger_icon{
+                display:block;
+                outline: none;
+                border: none;
+            
+            }
+
+        }
+
+
+    }
 
 }
