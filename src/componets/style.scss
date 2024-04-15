@@ -1,4 +1,4 @@
-@import './scss/variable';
+@import '../scss/variable';
 
 li{
     list-style: none;
@@ -13,7 +13,7 @@ body{
 }
 .navbar{
 
-    &__socialIcon{
+    &__social-icon{
         @include displayflex(center,space-around);
         border-bottom: 1px solid $secondnary_light;
         height: 60px;
@@ -67,7 +67,7 @@ body{
                 position: relative;
                 width: 150px;
 
-                &__scheduleIcon{
+                &__schedule-icon{
                 position: absolute;
                 left: 0px;
                 background-color: $primary;
@@ -87,7 +87,7 @@ body{
     }
 
     @media(max-width:768px){
-        &__socialIcon{
+        &__social-icon{
             display: none;
         }
         &__container{
@@ -99,13 +99,19 @@ body{
 
                 &__sub{
                 display:none;
-                flex-direction: column;
-                position: absolute;
-                top: 60px;
-                gap: 15px;
             }
             &__show{
                 display: block;
+                position: absolute;
+                top:110px;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                gap: 15px;
+                text-align: center;
+                text-transform: capitalize;
+                li{
+                    margin-bottom: 10px;
+                }
             }
             &__visit{
                 display: none;
