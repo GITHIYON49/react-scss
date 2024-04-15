@@ -1,18 +1,16 @@
 import React from 'react'
-import { BsCalendar2Fill } from "react-icons/bs";
-import { BsEnvelopeFill } from "react-icons/bs";
+import { BsCalendar2Fill,BsEnvelopeFill } from "react-icons/bs";
 import { FaLocationDot } from "react-icons/fa6";
-import { TiSocialFacebook } from "react-icons/ti";
-import { TiSocialTwitter } from "react-icons/ti";
-import { TiSocialLinkedin } from "react-icons/ti";
-import { TiSocialInstagram } from "react-icons/ti";
+import { TiSocialFacebook,TiSocialTwitter,TiSocialLinkedin,TiSocialInstagram } from "react-icons/ti";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { useState } from 'react';
 
 function Navbar() {
 
-  function show() { 
-    document.getElementsByClassName.toggle('navbar__container__links__show')
-  }
+  const [show,setShow]= useState()
+  // function show() { 
+  //   document.getElementsByClassName.toggle('navbar__container__links__show')
+  // }
 
 
   return <>
@@ -49,7 +47,7 @@ function Navbar() {
 
         </div>
     
-        <button className='navbar__container__btn' onClick={() => {show()}}>
+        <button className='navbar__container__btn' onClick={() =>setShow(document.getElementsByClassName.toggle('navbar__container__links__show'))}>
       <GiHamburgerMenu />
       </button>
 
